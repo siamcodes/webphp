@@ -6,6 +6,7 @@ VALUES ('$_POST[firstname]', '$_POST[lastname]', '$_POST[email]', '$_POST[phone]
 
 if (mysqli_query($conn, $sql)) {
   echo "New record created successfully";
+  header( "location: member_show.php" );
 } else {
   echo "Error: " . $sql . "<br>" . mysqli_error($conn);
 }

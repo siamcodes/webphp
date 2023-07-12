@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="style.css">
 <?php
    include "connect.php";
 
@@ -6,12 +7,33 @@
 
 if (mysqli_num_rows($result) > 0) {
   // output data of each row
+?>
+<table class="table">
+  <th> ชื่อ - นามสกุล </th>
+  <th> อีเมล </th>
+  <th> เบอร์โทร </th>
+  <th> ที่อยู่ </th>
+  <th> Edit </th>
+  <th> Delete </th>
+<?php
   while($row = mysqli_fetch_assoc($result)) {
-    echo "$row[firstname] $row[lastname] $row[email] $row[phone] $row[address] <br/>";
+?>
+  <tr>
+      <td><?php echo"$row[firstname] $row[lastname]"; ?> </td>
+      <td><?php echo"$row[email]"; ?> </td>
+      <td><?php echo"$row[phone]"; ?> </td>
+      <td><?php echo"$row[address]"; ?> </td>
+      <td>  Edit  </td>
+      <td>  Delete  </td>
+  </tr>
+<?php
   }
+?>
+</table>
+
+<?php
 } else {
   echo "0 results";
 }
-
 mysqli_close($conn);
 ?>
