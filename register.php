@@ -1,4 +1,3 @@
-<link href="style.css" rel="stylesheet" />
 <form action="member_insert.php" method="post" enctype="multipart/form-data">
     ชื่อ  <input type="text" name="firstname" />
     นามสกุล  <input type="text" name="lastname" /> <br/>

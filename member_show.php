@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css" />
 <?php
    include "connect.php";
 
@@ -9,12 +9,14 @@ if (mysqli_num_rows($result) > 0) {
   // output data of each row
 ?>
 <table class="table">
-  <th> ชื่อ - นามสกุล </th>
-  <th> อีเมล </th>
-  <th> เบอร์โทร </th>
-  <th> ที่อยู่ </th>
-  <th> Edit </th>
-  <th> Delete </th>
+  <tr>
+    <th> ชื่อ - นามสกุล </th>
+    <th> อีเมล </th>
+    <th> เบอร์โทร </th>
+    <th> ที่อยู่ </th>
+    <th> Edit </th>
+    <th> Delete </th>
+  </tr>
 <?php
   while($row = mysqli_fetch_assoc($result)) {
 ?>
@@ -23,8 +25,8 @@ if (mysqli_num_rows($result) > 0) {
       <td><?php echo"$row[email]"; ?> </td>
       <td><?php echo"$row[phone]"; ?> </td>
       <td><?php echo"$row[address]"; ?> </td>
-      <td>  Edit  </td>
-      <td>  Delete  </td>
+      <td><?php echo"<a href='member_edit.php?id=$row[id]'> Edit </a> "; ?> </td>
+      <td><?php echo"<a href='member_del.php?id=$row[id]'> Delete </a> "; ?> </td>
   </tr>
 <?php
   }
