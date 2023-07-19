@@ -1,4 +1,6 @@
-<link rel="stylesheet" href="style.css" />
+<link rel="stylesheet" href="./styles.css" />
+ <h1 class="text-center"> แสดงสินค้า </h1> 
+<div class="center">
 <?php
    include "connect.php";
    $sql = "SELECT * FROM tbl_product";
@@ -7,12 +9,12 @@
 
 <table class="table">
   <tr>
-    <th> ชื่อสินค้า </th>
-    <th> ราคา </th>
-    <th> จำนวนในคลัง </th>
-    <th> รายละเอียดสินค้า </th>
-    <th> Edit </th>
-    <th> Delete </th>
+    <th width="30%"> ชื่อสินค้า </th>
+    <th width="5%"> ราคา </th>
+    <th width="5%"> จำนวนในคลัง </th>
+    <th width="50%"> รายละเอียดสินค้า </th>
+    <th width="5%"> Edit </th>
+    <th width="5%"> Delete </th>
   </tr>
 <?php
 if (mysqli_num_rows($result) > 0) {
@@ -37,6 +39,7 @@ if (mysqli_num_rows($result) > 0) {
 } else {
   echo "0 results";
 }
-
 mysqli_close($conn);
 ?>
+
+</div>
