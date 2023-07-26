@@ -14,6 +14,7 @@ if (mysqli_num_rows($result) > 0) {
     <th> อีเมล </th>
     <th> เบอร์โทร </th>
     <th> ที่อยู่ </th>
+    <th> รูป </th>
     <th> Edit </th>
     <th> Delete </th>
   </tr>
@@ -25,6 +26,7 @@ if (mysqli_num_rows($result) > 0) {
       <td><?php echo"$row[email]"; ?> </td>
       <td><?php echo"$row[phone]"; ?> </td>
       <td><?php echo"$row[address]"; ?> </td>
+      <td><img src="./images/<?php echo $row[photo] ?>" width="200px" />  </td>
       <td><?php echo"<a href='member_edit.php?id=$row[id]'> Edit </a> "; ?> </td>
       <td><?php echo"<a href='member_del.php?id=$row[id]'> Delete </a> "; ?> </td>
   </tr>

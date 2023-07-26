@@ -15,6 +15,7 @@
         เบอร์โทร<input type="text" name="phone" class="input" value="<?php echo $row[phone]; ?>"/> 
         ที่อยู่<textarea name="address" class="input"> <?php echo $row[address]; ?> </textarea>
         แนบรูป<input type="file" name="photo" class="input" /> 
+        <img src="./images/<?php echo $row[photo] ?>" width="200px" />
         <input type="submit" value="Update" class="button"/>
     </form>
 </div>

@@ -22,6 +22,11 @@
   border: 1px dashed #FF0000 ;
 }
 
+.input:focus{
+  border: 3px solid #05e13c; 
+  background-color: lightblue;
+}
+
 .button{
   background-color: #0703f1e8;
   border: none;
@@ -44,7 +49,7 @@
   margin: auto;
 }
 
-.center{
+.center{  
   display: flex;
   justify-content: center;
   align-items: center;
