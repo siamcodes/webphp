@@ -8,7 +8,8 @@ $folder = "./images/" . $filename;
 $sql = "INSERT INTO tbl_member (firstname, lastname, email, password, phone, photo, address)
 VALUES ('$_POST[firstname]', '$_POST[lastname]', '$_POST[email]', '$_POST[password]' ,'$_POST[phone]', '$filename', '$_POST[address]')";
 
- if (move_uploaded_file($tempname, $folder)) {
+ //if (move_uploaded_file($tempname, $folder)) {
+  if (copy($tempname, $folder)) {
     echo "อับโหลดรู้ได้แล้ว";
   } else {
     echo "อับโหลดรูปไม่ได้";
